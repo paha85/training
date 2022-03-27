@@ -6,6 +6,5 @@ for item in list:
     item = item.split()
     name = item.pop()
     names.append(name.capitalize())
-print(names)
 for name in names:
     print(f'{random.choice(greetings)} {name}!')
