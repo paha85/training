@@ -8,13 +8,16 @@ for price in prices:
     price_two = price.split('.')
     full_prices.append(f'{price_two[0].zfill(2)} руб. {price_two[1].zfill(2)} коп.')
 full_prices_str = ', '.join(full_prices)
-print(full_prices_str)
-print(f'Идентификатор списка: {id(full_prices)}')
+print( full_prices_str)
+id_before = id(full_prices)
+print(f'Идентификатор списка до сортировки: {id(full_prices)}')
 
 # 5.B
 full_prices.sort()
 print(full_prices)
+id_after = id(full_prices)
 print(f'Идентификатор списка после сортировки: {id(full_prices)}')
+print(f'Список цен до сортировки равен списку после сортировки: {id_before == id_after}')
 
 # 5.C
 full_prices_reversed = full_prices.copy()
